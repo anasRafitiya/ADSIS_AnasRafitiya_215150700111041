@@ -26,36 +26,41 @@
   -	Konfigurasi default gateway
   ![gambar8](https://github.com/anasRafitiya/ADSIS_AnasRafitiya_215150700111041/assets/125624764/6efc021f-a448-405b-b9e5-ebadd8872814)
 
-### 3.	Lakukan instalasi Webmin lalu buatlah user bernama nama anda, lalu buat group Adsis_(kelas masing-masing) dan masukkan nama anda di group**
+### 3.	Lakukan instalasi Webmin lalu buatlah user bernama nama anda, lalu buat group Adsis_(kelas masing-masing) dan masukkan nama anda di group
   
   - Bukti instalasi webmin
   ![gambar9](https://github.com/anasRafitiya/ADSIS_AnasRafitiya_215150700111041/assets/125624764/c1d922af-21e8-49aa-99e7-9036bd386b4c)
 
-  -	Membuat user bernama “AnasR”
+  -	Membuat user bernama “anasRafitiya”
   ![gambar10](https://github.com/anasRafitiya/ADSIS_AnasRafitiya_215150700111041/assets/125624764/bba14606-0bc8-43a9-9f23-df6a5e03b029)
   > Klik "create a new user"
+  
 
   ![gambar11](https://github.com/anasRafitiya/ADSIS_AnasRafitiya_215150700111041/assets/125624764/1f31ffdd-e88c-4ed8-ae62-db12f3ebe6d1)
   > Tampilan dari halaman "create new user"
+  
 
   ![gambar12](https://github.com/anasRafitiya/ADSIS_AnasRafitiya_215150700111041/assets/125624764/ab3389be-5323-4d70-9d49-91b4df634616)
   > User baru telah dibuat, terlihat pada baris terakhir daftar user
+  
 
   -	Membuat group Adsis_E dan memasukkan nama ke group
   ![gambar13](https://github.com/anasRafitiya/ADSIS_AnasRafitiya_215150700111041/assets/125624764/04d10ba9-129e-473e-8050-5f519302ecaf)
   > Klik "create a new grup"
+  
 
   ![gambar14](https://github.com/anasRafitiya/ADSIS_AnasRafitiya_215150700111041/assets/125624764/2b972eb4-a594-4395-9c78-3eab34e63611)
   > Tampilan dari halaman "create a new grup"
+  
 
   ![gambar15](https://github.com/anasRafitiya/ADSIS_AnasRafitiya_215150700111041/assets/125624764/ec329eca-ade8-41cd-a472-86e7f22d3b32)
   > Grup baru telah dibuat, terlihat pada baris terakhir daftar grup
+  
   
 ### 4. Lakukan ping ke alamat ip anda dan coba lakukan reject dan drop di webmin, lalu analisa apa yang terjadi?
   
   - Menambahkan rule drop untuk incoming paket di menu linux firewall
   ![gambar18](https://github.com/anasRafitiya/ADSIS_AnasRafitiya_215150700111041/assets/125624764/0604325e-2d6b-40f0-963b-658b47d27a08)
-
 
   - Menambahkan rule reject untuk incoming paket di menu linux firewall
   ![gambar19](https://github.com/anasRafitiya/ADSIS_AnasRafitiya_215150700111041/assets/125624764/989f8b70-bc7d-429a-90d0-dfc43e8ca6b5)
@@ -69,7 +74,12 @@
   ![gambar22](https://github.com/anasRafitiya/ADSIS_AnasRafitiya_215150700111041/assets/125624764/aba463fe-7d87-4f84-9df7-16b9f5f210e0)
   >Peringatan setelah klik apply configuration
   
+  
+  - Hasil ping
+  ![gambar23](https://github.com/anasRafitiya/ADSIS_AnasRafitiya_215150700111041/assets/125624764/5f8c6f95-f0af-496f-8691-82b154a21839)
+  
   - Analisa apa yang terjadi
+  Setelah melihat hasil dari menjalankan langkah-langkah di atas, dapat diamati bahwa dengan menambahkan aturan berupa reject dan drop ke dalam incoming packets (INPUT) di firewall, ini berpengaruh terhadap paket yang dikirimkan ke alamat tujuan. Paket yang dikenakan aturan drop seharusnya akan ditolak begitu saja oleh firewall. Sedangkan paket yang dikenakan aturan reject dia akan dikembalikan kepada pengirim berupa pesan bahwa paket ditolak.
   
 ### 5. Buatlah perintah otomatis yang berfungsi untuk ping www.filkom.ub.ac.id
   
